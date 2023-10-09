@@ -9,3 +9,13 @@ curl "http://didawiki.di.unipi.it/lib/exe/fetch.php/magistraleinformatica/dmi/gu
 && rm "dataset/tmp.zip" \
 && mv "dataset/data" "dataset/data-raw"
 ```
+
+## Requirements installation
+It is recomended to use a virtual environment (venv, conda)
+
+### python venv
+```bash
+python3 -m venv .env \
+&& source .env/bin/activate \
+&& pip install -r requirements.txt
+```
