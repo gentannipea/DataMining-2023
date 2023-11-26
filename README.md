@@ -11,6 +11,12 @@ mkdir -p "dataset" \
 && mv "dataset/data" "dataset/data-raw"
 ```
 
+## States population integration dataset
+
+```bash
+curl 'https://www.dropbox.com/scl/fi/fu2n5c0qjj2zidwc6ybk7/population.csv?rlkey=i0c1ve16hrbsx8152wl8hyvi4&dl=0' -L > dataset/data-raw/population.csv
+```
+
 ## Requirements installation
 It is recommended to use a virtual environment (venv, conda)
 
