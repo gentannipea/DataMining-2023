@@ -26,3 +26,9 @@ python3 -m venv .env \
 && source .env/bin/activate \
 && pip install -r requirements.txt
 ```
+
+## Notebooks
+
+- `notebooks/Data_Understanding.ipynb` contains the data understanding phase
+- `notebooks/Data_Preparation.ipynb` contains the data preparation phase and exports the cleaned dataset to `dataset/data`
+- `notebooks/Clustering.ipynb` contains the clustering phase
