@@ -443,7 +443,7 @@ def _update_rotation(X_num, X_cat, V, first_index, second_index, n_clusters, lab
     :return: P_1_new, P_2_new, V_new - new P for the first subspace, new P for the second subspace and new V
     """
 
-    print(f"-----\nscatter_cat: {scatter_cat}\n-----")
+    # print(f"-----\nscatter_cat: {scatter_cat}\n-----")
 
     # Check if second subspace is the noise space
     is_noise_space = (n_clusters[second_index] == 1)
@@ -716,7 +716,6 @@ class kSubMix():
         :param ground_truth: Ground truth labels
         :return: the k-SubMix object
         """
-        print(GAMMA)
         labels, centers_num, centers_cat, V, m, l, Pn, Pc, n_clusters, scatter_matrices, scatter_cat = subMix(X,
                                                                                                                 X_num,
                                                                                                                 X_cat,
