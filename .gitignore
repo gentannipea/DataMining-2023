@@ -10,6 +10,9 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.env9
+.vscode
+shell.nix
 .Python
 build/
 develop-eggs/
