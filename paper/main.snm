@@ -1,0 +1,18 @@
+\beamer@slide {corr}{4}
+\beamer@slide {corr}{5}
+\beamer@slide {corr}{6}
+\beamer@slide {tab:my_label}{10}
+\beamer@slide {kmeans}{11}
+\beamer@slide {tab:my_label}{12}
+\beamer@slide {dbscan}{13}
+\beamer@slide {tab:my_label}{14}
+\beamer@slide {hier}{15}
+\beamer@slide {hier}{16}
+\beamer@slide {GTS}{33}
+\beamer@slide {Silhouette Score for the different Scaling}{37}
+\beamer@slide {MOT}{38}
+\beamer@slide {CHGMOT}{39}
+\beamer@slide {ANOM1}{40}
+\beamer@slide {ANOM2}{40}
+\beamer@slide {ROC}{42}
+\beamer@slide {MTX}{43}

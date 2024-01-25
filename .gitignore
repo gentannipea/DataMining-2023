@@ -166,3 +166,21 @@ cython_debug/
 
 .vscode
 cuda-shell.nix
+
+# Latex
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.pdf
+*.dvi
+*.ps
+*.lof
+
+# TensorBoard
+runs/

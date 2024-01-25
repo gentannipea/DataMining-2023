@@ -1,0 +1,156 @@
+\documentclass[9pt,xcolor=svgnames]{beamer} %Beamer
+
+\usepackage{palatino} %font type
+\usepackage{svg}
+\usepackage{stackengine}
+\usefonttheme{metropolis} %Type of slides
+\usefonttheme[onlymath]{serif} %font type Mathematical expressions
+\usetheme[progressbar=frametitle,titleformat frame=smallcaps,numbering=counter,sectionpage=progressbar]{metropolis} %This adds a bar at the beginning of each section.
+\useoutertheme[subsection=false]{miniframes} %Circles in the top of each frame, showing the slide of each section you are at
+
+
+
+\usepackage{appendixnumberbeamer} %enumerate each slide without counting the appendix
+\setbeamercolor{progress bar}{fg=Maroon!70!Coral} %These are the colours of the progress bar. Notice that the names used are the svgnames
+\setbeamercolor{title separator}{fg=DarkSalmon} %This is the line colour in the title slide
+\setbeamercolor{structure}{fg=black} %Colour of the text of structure, numbers, items, blah. Not the big text.
+\setbeamercolor{normal text}{fg=black!87} %Colour of normal text
+\setbeamercolor{alerted text}{fg=DarkRed!60!Gainsboro} %Color of the alert box
+\setbeamercolor{example text}{fg=Maroon!70!Coral} %Colour of the Example block text
+
+\definecolor{mydarkred}{HTML}{A62618}
+
+\definecolor{highlight1}{HTML}{FFE070}
+\definecolor{highlight2}{HTML}{D0D0FF}
+
+\setbeamercolor{palette primary}{bg=NavyBlue!50!DarkOliveGreen, fg=white} %These are the colours of the background. Being this the main combination and so one. 
+\setbeamercolor{palette secondary}{bg=NavyBlue!50!DarkOliveGreen, fg=white}
+\setbeamercolor{palette tertiary}{bg=NavyBlue!40!Black, fg= white}
+\setbeamercolor{section in toc}{fg=NavyBlue!40!Black} %Color of the text in the table of contents (toc)
+
+\setbeamercovered{transparent}
+
+\usepackage{ulem}
+\usepackage{arevmath}
+\usepackage{fontenc}
+
+\usepackage{pgfpages}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+
+\newcommand{\xmark}{\scalebox{0.75}{$\ballotx$}}
+%These next packages are the useful for Physics in general, you can add the extras here. 
+\usepackage{amsmath,amssymb}
+\usepackage{slashed}
+\usepackage{cite}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{geometry}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{bluetemp}\xspace}}%metropolis}}\xspace}
+\usepackage{nameref}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+% \usepackage{soul}
+% \input{highlight.sty}
+
+% \usepackage{tcolorbox}
+% \tcbuselibrary{skins, theorems}
+% \tcbset{fonttitle=\footnotesize}
+% \newcommand{\highlight}[2][yellow]{
+%   \tcboxmath[colback=#1]{#2}
+% }
+
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{aliascnt}
+
+\newfloat{eqfloat}{h}{eqflts}
+\floatname{eqfloat}{Equation}
+
+\newcommand{\vspacer}{\vphantom{\left(\dfrac{\sum_1^1 f \left(\sum_1^1\right)}{\sum_1^1 f \left(\sum_1^1\right)}\right)}}
+
+\newcommand{\highlight}[2][yellow]{\mathchoice%
+  {\colorbox{#1}{$ \vspacer \displaystyle#2$}}%
+  {\colorbox{#1}{$ \vspacer \textstyle#2$}}%
+  {\colorbox{#1}{$ \vspacer \scriptstyle#2$}}%
+  {\colorbox{#1}{$ \vspacer \scriptscriptstyle#2$}}}%
+
+
+\newcommand{\mdr}[1]{\textbf{\color{mydarkred} #1} }
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+
+\graphicspath{ {./img/} }
+
+\title{{\huge Project Presentation}}
+\subtitle{Group 7}
+\author[Name]{
+Stefano Pea \#561020 \newline Simone Ianniciello \#581201 \newline Claudia Gentili \#581522
+} %With inst, you can change the institution they belong
+\institute[uni]{Department of Computer Science \\ University of Pisa}
+\date{\textbf {January 25 2024}} %Here you can change the date
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\titlegraphic { 
+\begin{tikzpicture}[overlay,remember picture]
+    \node[left=-0.2cm] at (current page.23){
+        \includegraphics[width=4.5cm]{img/brushed_unipi.png}
+    };
+    \node[left=0.8cm] at (current page.29){
+        %\includegraphics[width=10.6cm]{img/ferragina.png}
+    };
+    % \node[text width=5cm, right=-5cm, ] at (current page.-30){
+    %     \color{White}
+    %     {DataMining Paper Presentation}
+    % };
+\end{tikzpicture}
+}
+\pgfmathsetseed{42}
+\newcommand{\scribblecancel}[1]{%
+  \tikz[baseline=(X.base)]{
+    \node[inner sep=0pt, outer sep=0pt] (X) {#1};
+    \coordinate (start) at (X.south west);
+    \foreach \x in {1,...,40} {
+      \pgfmathsetmacro{\randx}{random(0,100)/100}
+      \pgfmathsetmacro{\randy}{random(0,100)/100}
+      \coordinate (current) at ($(X.south west)!\randx!(X.south east) + \randy*(0,0.4)$);
+      \draw[line cap=round, line join=round, line width=.5pt] (start) -- (current);
+      \coordinate (start) at (current);
+    }
+  }%
+}
+
+% \titlegraphic{\vspace{-0.9cm}\hfill\includegraphics[scale=0.23]{brushed_unipi.png}} %You can modify the location of the logo by changing the command \vspace{}. 
+
+\usepackage{wrapfig}
+
+\begin{document}
+{
+% #003c71
+\setbeamercolor{background canvas}{bg=NavyBlue!50!DarkOliveGreen, fg=White}
+\setbeamercolor{normal text}{fg=White}
+\maketitle
+}%This is the colour of the first slide. bg= background and fg=foreground
+
+\metroset{titleformat frame=smallcaps} %This changes the titles for small caps
+
+\input{chp/DU-DC}
+\input{chp/Clustering}
+\input{chp/Classification}
+\input{chp/TS}
+
+
+\end{document}
